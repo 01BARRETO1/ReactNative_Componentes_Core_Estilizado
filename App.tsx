@@ -1,12 +1,23 @@
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import { StyleSheet, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import EmployeeList from './src/components/EmployeeList';
+import CompanyHeader from './src/components/CompanyHeader';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    
+      <SafeAreaProvider>
+        <StatusBar style='light'
+        />
+        <SafeAreaView style={styles.safeArea}>
+          <View style={styles.appContainer}>
+           <CompanyHeader/>
+          <EmployeeList />
+          </View>
+          
+        </SafeAreaView>
+      </SafeAreaProvider>
+    
   );
 }
 
@@ -17,4 +28,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  safeArea:{
+    flex:1,
+    backgroundColor:'#2196f3'
+  },
+  appContainer: {
+    flex:1,
+    backgroundColor: '#ffff'
+  }
 });
