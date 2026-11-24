@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical: 20,
     paddingHorizontal: 15,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#e3dddd5c",
   },
 
   logo: {

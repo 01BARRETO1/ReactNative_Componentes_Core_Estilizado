@@ -10,8 +10,10 @@ export default function App() {
         <StatusBar style='light'
         />
         <SafeAreaView style={styles.safeArea}>
+          <View style={styles.headercontainer}>
+            <CompanyHeader/>
+          </View>
           <View style={styles.appContainer}>
-           <CompanyHeader/>
           <EmployeeList />
           </View>
           
@@ -22,8 +24,8 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  headercontainer: {
+    flex: 3,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
     backgroundColor:'#2196f3'
   },
   appContainer: {
-    flex:1,
+    flex:7,
     backgroundColor: '#ffff'
   }
 });
